@@ -8,12 +8,12 @@ $(document).ready(function() {
     // vzamemo podatek iz inputa in ga dodamo v html
     // ter izpraznimo input 
     var printColor = "color:" + selectedColor;
-	var xmarkImg = '<img class=\'bullet\' id=\'icon\' src="static/xmark.svg">'
+    var xmarkImg = '<img class=\'bullet\' id=\'icon\' src="static/xmark.svg">'
     var item = $('<li style="' + printColor + '">' + xmarkImg + $('input').val() + '</li>');
-	if (($('#input').val()) !== '') {    
-		$('#list').append(item);
-		$('#input').val('');
-	};
+    if (($('#input').val()) !== '') {    
+      $('#list').append(item);
+      $('#input').val('');
+    };
 
     // z klikom na seznam odstranimo tocko iz seznama
     $('.bullet').click(function() {
