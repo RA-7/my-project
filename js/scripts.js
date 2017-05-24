@@ -9,7 +9,7 @@ $(document).ready(function() {
     // ter izpraznimo input 
     var printColor = "color:" + selectedColor;
     var xmarkImg = '<img class=\'bullet\' id=\'icon\' src="static/xmark.svg">'
-    var item = $('<li style="' + printColor + '">' + xmarkImg + $('input').val() + '</li>');
+    var item = $('<li style="' + printColor + '">' + xmarkImg + '\xa0\xa0' + $('input').val() + '</li>');
     if (($('#input').val()) !== '') {    
       $('#list').append(item);
       $('#input').val('');
@@ -32,6 +32,5 @@ $(document).ready(function() {
     $('.color').removeClass('input_focus');
     $(this).addClass('input_focus');
     selectedColor = $(this).attr('id');
-
   });
 });
