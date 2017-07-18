@@ -10,7 +10,7 @@ $(document).ready(function() {
     var printColor = "color:" + selectedColor;
     var xmarkImg = '<img class=\'bullet\' id=\'icon\' src="static/xmark.svg">'
     var item = $('<li style="' + printColor + '">' + xmarkImg + '\xa0\xa0' + $('input').val() + '</li>');
-    if (($('#input').val()) !== '') {    
+    if (($('#input').val()) !== '') {
       $('#list').append(item);
       $('#input').val('');
     };
@@ -21,9 +21,17 @@ $(document).ready(function() {
     });
   });
   
-  // change the color of the input to red while focused
+  // make it so hitting the enter key while focusing on input
+  // acts the same as clicking on the button 'Add item'
+  $('#input').keyup(function(event){
+    if(event.keyCode == 13){
+        $('#button').click();
+    }
+  });
+  
+  // change the color of the input to selectedColor while focused
   $('#input').focus(function() {
-    $('#input').css('outline-color','red');
+    $('#input').css('outline-color', selectedColor);
   });
   
   // add the input_focus class to the div that is clicked 
