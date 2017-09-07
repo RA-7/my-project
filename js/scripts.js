@@ -2,14 +2,14 @@ $(document).ready(function() {
 
   // pick black as starting list color
   $('#black').addClass('input_focus');
-  var selectedColor = 'black';
+  let selectedColor = 'black';
   
   $('#button').click(function() {
     // take the value out of input and append it
     // to the html, empty the input field
-    var printColor = "color:" + selectedColor;
-    var xmarkImg = '<img class=\'bullet\' id=\'icon\' src="static/xmark.svg">'
-    var item = $('<li style="' + printColor + '">' + xmarkImg + '\xa0\xa0' + $('input').val() + '</li>');
+    let printColor = "color:" + selectedColor;
+    let xmarkImg = '<img class=\'bullet\' id=\'icon\' src="static/xmark.svg">'
+    let item = $('<li style="' + printColor + '">' + xmarkImg + '\xa0\xa0' + $('input').val() + '</li>');
     if (($('#input').val()) !== '') {
       $('#list').append(item);
       $('#input').val('');
