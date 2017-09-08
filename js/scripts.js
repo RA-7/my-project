@@ -8,7 +8,7 @@ $(document).ready(function() {
     // take the value out of input and append it
     // to the html, empty the input field
     let printColor = "color:" + selectedColor;
-    let xmarkImg = '<img class=\'bullet\' id=\'icon\' src="static/xmark.svg">'
+    let xmarkImg = '<img class=\'bullet\' src="static/xmark.svg">'
     let item = $('<li style="' + printColor + '">' + xmarkImg + '\xa0\xa0' + $('input').val() + '</li>');
     if (($('#input').val()) !== '') {
       $('#list').append(item);
