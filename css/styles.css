@@ -33,15 +33,11 @@ button {
 LIST ITEMS
 *************************************/
 .bullet {
-	padding-right: 0px;
-}
-
-#icon {
 	width: 10px;
 	length: 10px;
 }
 
-#icon:hover { 
+.bullet:hover { 
 	cursor: pointer;
 	opacity: 0.65;
 }
